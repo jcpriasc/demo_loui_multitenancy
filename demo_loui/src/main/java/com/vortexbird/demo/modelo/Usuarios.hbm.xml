@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 2, 2017 4:29:40 PM by Hibernate Tools 5.1.0.Final -->
+<hibernate-mapping>
+    <class name="com.vortexbird.demo.modelo.Usuarios" table="usuarios"  optimistic-lock="version">
+        <id name="usuCedula" type="java.lang.Long">
+            <column name="usu_cedula" precision="10" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="tusuCodigo" type="java.lang.Long">
+            <column name="tusu_codigo" precision="10" scale="0" />
+        </property>
+        <property name="usuNombre" type="java.lang.String">
+            <column name="usu_nombre" length="50" not-null="true" />
+        </property>
+        <property name="usuLogin" type="java.lang.String">
+            <column name="usu_login" length="30" not-null="true" />
+        </property>
+        <property name="usuClave" type="java.lang.String">
+            <column name="usu_clave" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

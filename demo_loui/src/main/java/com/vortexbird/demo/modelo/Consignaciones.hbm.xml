@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 2, 2017 4:29:40 PM by Hibernate Tools 5.1.0.Final -->
+<hibernate-mapping>
+    <class name="com.vortexbird.demo.modelo.Consignaciones" table="consignaciones"  optimistic-lock="version">
+        <composite-id name="id" class="com.vortexbird.demo.modelo.ConsignacionesId">
+            <key-property name="conCodigo" type="java.lang.Long">
+                <column name="con_codigo" precision="10" scale="0" />
+            </key-property>
+            <key-property name="cueNumero" type="java.lang.String">
+                <column name="cue_numero" length="30" />
+            </key-property>
+        </composite-id>
+        <property name="usuCedula" type="java.lang.Long">
+            <column name="usu_cedula" precision="10" scale="0" />
+        </property>
+        <property name="conValor" type="java.lang.Double">
+            <column name="con_valor" precision="10" not-null="true" />
+        </property>
+        <property name="conFecha" type="java.util.Date">
+            <column name="con_fecha" length="29" not-null="true" />
+        </property>
+        <property name="conDescripcion" type="java.lang.String">
+            <column name="con_descripcion" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

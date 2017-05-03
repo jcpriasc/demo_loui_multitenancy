@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 2, 2017 4:29:40 PM by Hibernate Tools 5.1.0.Final -->
+<hibernate-mapping>
+    <class name="com.vortexbird.demo.modelo.TiposDocumentos" table="tipos_documentos"  optimistic-lock="version">
+        <id name="tdocCodigo" type="java.lang.Long">
+            <column name="tdoc_codigo" precision="10" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="tdocNombre" type="java.lang.String">
+            <column name="tdoc_nombre" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

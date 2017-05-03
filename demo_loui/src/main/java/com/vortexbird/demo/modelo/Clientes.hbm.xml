@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 2, 2017 4:29:40 PM by Hibernate Tools 5.1.0.Final -->
+<hibernate-mapping>
+    <class name="com.vortexbird.demo.modelo.Clientes" table="clientes"  optimistic-lock="version">
+        <id name="cliId" type="java.lang.Long">
+            <column name="cli_id" precision="10" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="tdocCodigo" type="java.lang.Long">
+            <column name="tdoc_codigo" precision="10" scale="0" not-null="true" />
+        </property>
+        <property name="cliNombre" type="java.lang.String">
+            <column name="cli_nombre" length="50" not-null="true" />
+        </property>
+        <property name="cliDireccion" type="java.lang.String">
+            <column name="cli_direccion" length="50" not-null="true" />
+        </property>
+        <property name="cliTelefono" type="java.lang.String">
+            <column name="cli_telefono" length="50" not-null="true" />
+        </property>
+        <property name="cliMail" type="java.lang.String">
+            <column name="cli_mail" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>
